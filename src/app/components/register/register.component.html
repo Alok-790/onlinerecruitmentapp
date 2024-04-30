@@ -1,0 +1,132 @@
+<div class="registerclass flex justify-content-center align-item-center h-full">
+<form [formGroup]="registerForm">
+    <p-card header="Register" [style]="{width: '500px'}">
+        <div class="field">
+            <label for="fullName">FullName</label>
+            <input type="text" pInputText formControlName="fullName" class="w-full" name="fullName"
+                placeholder="Type your name" />
+            <small *ngIf="fullName.invalid  && (fullName.dirty || fullName.touched)" class="block p-error">
+                <div *ngIf="fullName.errors?.['required']">Name is required</div>
+                
+            </small>
+        </div>
+
+        <div class="field">
+            <label for="em">Address</label>
+            <input type="text" pInputText formControlName="address" class="w-full" name="address"
+                placeholder="Type your address" />
+            <small *ngIf="address.invalid  && (address.dirty || address.touched)" class="block p-error">
+                <div *ngIf="email.errors?.['required']">Address is required</div>
+            </small>
+        </div>
+
+        <div class="email">
+            <label for="em">Email</label>
+            <input type="text" pInputText formControlName="email" class="w-full" name="email"
+                placeholder="Type your Email" />
+            <small *ngIf="email.invalid  && (email.dirty || email.touched)" class="block p-error">
+                <div *ngIf="email.errors?.['required']">Email is required</div>
+                <div *ngIf="email.errors?.['email']">Email should be valid</div>
+            </small>
+        </div>
+
+        <div class="phoneno">
+            <label for="em">Phone No</label>
+            <input type="number" pInputText formControlName="phoneno" class="w-full" name="phoneno"
+                placeholder="Type your Phone No" />
+            <small *ngIf="phoneno.invalid  && (phoneno.dirty || phoneno.touched)" class="block p-error">
+                <div *ngIf="phoneno.errors?.['required']">Phone No. is required</div>
+                <div *ngIf="phoneno.errors?.['pattern']">Number should be valid</div>
+            </small>
+        </div>
+
+
+
+
+        <div class="field">
+            <label for="password">Password</label>
+            <input type="password" pInputText formControlName="password" class="w-full" name="password"
+                placeholder="Type your Password" />
+
+            <small *ngIf="password.invalid  && (password.dirty || password.touched)" class="block p-error">
+                <div *ngIf="password.errors?.['required']">Password is required</div>
+            </small>
+        </div>
+
+        <div class="field">
+            <label for="dob">Date of Birth</label>
+            <input type="date" pInputText formControlName="dob" class="w-full" name="dob"
+                placeholder="Input your D.O.B" />
+
+            <small *ngIf="dob.invalid  && (dob.dirty || dob.touched)" class="block p-error">
+                <div *ngIf="dob.errors?.['required']">D.O.B is required</div>
+            </small>
+        </div>
+
+        <!-- <div class="field">
+            <label for="gender">Gender</label>
+            <input type="radio" pInputText  
+            formControlName="gender" 
+            class="w-full" name="gender"
+            placeholder="Select your Gender" />
+
+            <small *ngIf="gender.invalid  && (gender.dirty || gender.touched)" class="block p-error">
+                <div *ngIf="gender.errors?.['required']">Gender is required</div>
+             </small>
+        </div> -->
+
+
+        <div class="field">
+            <!-- <label for="gender">Gender</label>
+            <div>
+                Male<input type="radio" class="form-control" name="gender" placeholder="Male">
+                Female<input type="radio" class="form-control" name="gender" placeholder="Female">
+                Others<input type="radio" class="form-control" name="gender" placeholder="Others">
+            </div> -->
+            <!-- <small *ngIf="gender.invalid  && (gender.dirty || gender.touched)" class="block p-error">
+                <div *ngIf="gender.errors?.['required']">Gender is required</div>
+             </small> -->
+             
+
+
+             <div class="inputBox">
+                <label for="gender">Gender:&nbsp;&nbsp; </label>
+                <div class="radio-container">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                </div>
+                <div class="radio-container">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                </div>
+                <div class="radio-container">
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="field">
+            <label for="nationality">Nationality</label>
+            <div >
+            <select id="nationality" name="nationality" required>
+                <option value="">Select Nationality</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="in">India</option>
+                <option value="ru">Russia</option>
+            </select>
+        </div>
+        </div>
+        
+
+        <p-button label="Register" styleClass="w-full" [disabled]="registerForm.invalid"></p-button>
+        <div class="mt-2">
+            Already a member?<a routerLink="/login">Login</a>
+        </div>
+    </p-card>
+</form>
+</div>

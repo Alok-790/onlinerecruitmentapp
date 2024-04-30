@@ -1,0 +1,60 @@
+
+.loginclass {
+    display: flex; /* Modern Browsers */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    min-height: 100vh; /* Optional: Set minimum height */
+  }
+  
+  .loginclass > form { /* Target direct child form element */
+    margin: auto; /* Fallback for older browsers */
+  }
+
+
+  .homeclass {
+    position: fixed; /* Fix the element to the viewport */
+    top: 0; /* Place it at the top */
+    left: 0; /* Place it at the left */
+    right: 0; /* Stretch it to the right edge */
+    display: flex; /* Make the container a flexbox */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content (optional) */
+    /* Optional styling for background or borders */
+    /* background-color: #fff; /* Uncomment for a white background */
+    /* border: 1px solid #ddd; /* Uncomment for a border */
+  }
+  
+  ul {
+    /* Inherit some styles from the parent */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Remove float for flexbox layout */
+    float: none;
+  }
+  
+  li {
+    border-right:1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: white; /* Adjust color if using a background */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  

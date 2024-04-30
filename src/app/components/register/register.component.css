@@ -1,0 +1,44 @@
+.form-control[type="radio"] {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    appearance: none; 
+    background-color: #fff; 
+    border: 2px solid #ccc; 
+    cursor: pointer; 
+  }
+  
+  .form-control[type="radio"]:checked {
+    background-color: black; 
+  }
+
+  /* .registerclass{
+    height: auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh; 
+  }
+  
+  .registerclass > form { 
+    margin: auto; 
+  } */
+
+
+  .inputBox {
+    display: inline-block;
+}
+
+.radio-container {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the spacing between radio buttons as needed */
+}
+
+.radio-container input[type="radio"] {
+    display: inline-block;
+}
+
+.radio-container label {
+    display: inline-block;
+    margin-left: 5px; /* Adjust the spacing between the radio button and its label as needed */
+}
